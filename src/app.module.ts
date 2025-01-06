@@ -10,8 +10,10 @@ import { CertificateModule } from './certificates/certificate.module';
 @Module({
   imports: [
     UserModule,
-    ConfigModule.forRoot(),
-    MongooseModule.forRoot(DB_CONFIG.URI),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    MongooseModule.forRoot(process.env.DB_URI),
     ProjectModule,
     SkillModule,
     CertificateModule,

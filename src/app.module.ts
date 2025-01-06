@@ -6,6 +6,7 @@ import { DB_CONFIG } from './common/config/config';
 import { ProjectModule } from './projects/project.module';
 import { SkillModule } from './skills/skill.module';
 import { CertificateModule } from './certificates/certificate.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { CertificateModule } from './certificates/certificate.module';
     ProjectModule,
     SkillModule,
     CertificateModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
